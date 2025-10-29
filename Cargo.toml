@@ -1,0 +1,31 @@
+[package]
+name = "simplyplural"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+serde = "*"
+serde_repr = "*"
+paste = "*"
+
+[dependencies.reqwest]
+version = "*"
+features = ["json"]
+
+[dev-dependencies]
+serial_test = "*"
+
+[dev-dependencies.tokio]
+version = "*"
+features = ["macros"]
+
+[features]
+default = []
+analytics = []
+automated_timers = []
+front = []
+members = []
+notes = []
+polls = []
+repeated_timers = []
+users = []
