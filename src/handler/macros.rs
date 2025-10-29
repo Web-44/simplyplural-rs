@@ -1,3 +1,4 @@
+#[cfg(any(feature = "automated_timers", feature = "members", feature = "notes", feature = "polls", feature = "repeated_timers"))]
 macro_rules! document_handler {
     ($name:ident, $url:literal, $response:ty, $create_data:ty, $update_data:ty) => {
         use std::fmt::Display;
@@ -24,6 +25,7 @@ macro_rules! document_handler {
     };
 }
 
+#[cfg(any(feature = "automated_timers", feature = "members", feature = "polls", feature = "repeated_timers"))]
 macro_rules! document_handler_all {
     ($name:ident, $url:literal, $response:ty) => {
         paste::paste! {
@@ -34,6 +36,7 @@ macro_rules! document_handler_all {
     };
 }
 
+#[cfg(feature = "notes")]
 macro_rules! document_handler_for {
     ($name:ident, $url:literal, $for_name:ident, $response:ty) => {
         paste::paste! {
