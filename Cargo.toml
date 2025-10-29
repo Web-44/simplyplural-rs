@@ -27,7 +27,7 @@ version = "*"
 features = ["macros"]
 
 [features]
-default = ["users"]
+default = ["users", "members", "front"]
 analytics = []
 automated_timers = []
 front = []

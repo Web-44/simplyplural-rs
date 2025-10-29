@@ -14,7 +14,7 @@ You can also provide your custom configured http client, should you not want to 
 ## Features
 
 Note that each group of endpoints, as specified by [the documentation](https://docs.apparyllis.com/docs/docs/api), has it's own feature.  
-Only the `users` feature is enabled by default, so please make sure to enable any additional features you require.
+The `front`, `members`, `users` features are enabled by default, so make sure to enable any additional features or disable the default features as you require.
 
 ## Example
 This is a minimalistic example for printing all the names of the currently fronting members:
