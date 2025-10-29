@@ -1,4 +1,4 @@
-use serde::{Deserialize, Serialize};
+use serde::Deserialize;
 
 #[derive(Deserialize, Debug, Clone)]
 pub struct IdExists<T> {
@@ -16,7 +16,7 @@ pub struct ResultWithErrorMessage {
 }
 
 #[cfg(any(feature = "users", feature = "members"))]
-#[derive(Serialize, Deserialize, Debug, Clone)]
+#[derive(serde::Serialize, Deserialize, Debug, Clone)]
 pub struct Frame {
     #[serde(rename = "bgShape")]
     background_shape: Option<String>,

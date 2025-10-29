@@ -1,5 +1,7 @@
 use reqwest::{Client, Error};
+#[cfg(any(feature = "front", feature = "users"))]
 use std::fmt::Display;
+#[cfg(feature = "front")]
 use crate::error::SPError;
 
 pub mod handler;
