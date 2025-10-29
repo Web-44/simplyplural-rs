@@ -21,8 +21,10 @@ const DEV_API_BASE_URL: &str = "https://devapi.apparyllis.com/v1";
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum SPEnvironment {
     /// Use the production API (https://api.apparyllis.com)
+    /// The app is found at https://app.apparyllis.com
     Production,
     /// Use the development API (https://devapi.apparyllis.com)
+    /// The app is found at https://devapp.apparyllis.com
     Development
 }
 
