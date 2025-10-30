@@ -30,7 +30,7 @@ macro_rules! document_handler_all {
     ($name:ident, $url:literal, $response:ty) => {
         paste::paste! {
             pub(crate) async fn [<get_all_ $name>](client: &SPClient, user_id: impl Display) -> SPResult<Vec<$response>> {
-                get(client, format!("/{}/{}", stringify!($url), user_id)).await
+                get(client, format!("/{}/{}", $url, user_id)).await
             }
         }
     };
@@ -41,7 +41,7 @@ macro_rules! document_handler_for {
     ($name:ident, $url:literal, $for_name:ident, $response:ty) => {
         paste::paste! {
             pub(crate) async fn [<get_all_ $name _for_ $for_name>](client: &SPClient, user_id: impl Display, [<$for_name _id>]: impl Display) -> SPResult<Vec<$response>> {
-                get(client, format!("/{}/{}/{}", stringify!($url), user_id, [<$for_name _id>])).await
+                get(client, format!("/{}/{}/{}", $url, user_id, [<$for_name _id>])).await
             }
         }
     };
