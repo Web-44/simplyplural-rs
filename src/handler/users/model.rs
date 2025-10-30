@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use serde::{Deserialize, Serialize};
 use crate::handler::model::Frame;
 use crate::UnixTimestamp;
@@ -29,7 +30,7 @@ pub struct UserData {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub frame: Option<Frame>,
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub fields: Option<Vec<UserField>>,
+    pub fields: Option<HashMap<String, UserField>>,
 }
 
 
